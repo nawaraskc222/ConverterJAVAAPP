@@ -1,4 +1,4 @@
-package com.nawaras.CONVERT;
+package com.nawaras.CONVERT.FinalProject;
 
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -52,7 +52,7 @@ public  JTextField textField;
 	public DOCX() {
 		
 	
-		setBounds(800, 150, 550, 420);
+		setBounds(800, 150, 550, 400);
 		setTitle("ConVe App");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	
@@ -135,6 +135,7 @@ public  JTextField textField;
 			}
 		});
 		btnNewButton_2.setForeground(Color.RED);
+		btnNewButton_2.setBounds(158, 186, 122, 30);
 		getContentPane().add(btnNewButton_2);
 		JButton btnNewButton_23 = new JButton("For for .TXT next Page >>");
 		btnNewButton_23.addActionListener(new ActionListener() {

@@ -1,4 +1,4 @@
-package com.nawaras.CONVERT;
+package com.nawaras.CONVERT.FinalProject;
 
 
 import com.itextpdf.text.Document;
@@ -63,7 +63,7 @@ public	String filename1;
 	public TEXTtopdf() {
 		getContentPane().setForeground(new Color(0, 128, 128));
 		setTitle("ConVe App");
-		setBounds(800, 150, 550, 420);
+		setBounds(800, 150, 550, 400);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().setLayout(null);
 
@@ -138,12 +138,11 @@ public	String filename1;
         }
     	 clear();
 	     	     
-	     	    
-        
+	     	           
 		
-		
-	}
-});
+					
+				}
+			});
 
 		btnNewButton_1.setBounds(158, 186, 122, 30);
 		getContentPane().add(btnNewButton_1);
