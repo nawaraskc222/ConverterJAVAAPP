@@ -18,9 +18,9 @@ import javax.swing.JTextField;
 import com.spire.doc.Document;
 import com.spire.doc.ToPdfParameterList;
 
-public class DOCX {
+public class DOCX extends JFrame{
 
-	private JFrame frame;
+
 	public JLabel label;
 
 	public String userName ;
@@ -38,7 +38,9 @@ public  JTextField textField;
 			public void run() {
 				try {
 					DOCX window = new DOCX();
-					window.frame.setVisible(true);
+					window.setVisible(true);
+					
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -46,40 +48,25 @@ public  JTextField textField;
 		});
 	}
 
-	/**
-	 * Create the application.
-	 */
-	public DOCX() {
-		initialize();
-	}
-
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(800, 150, 550, 420);
-		frame.setTitle("ConVe App");
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	
-		frame.getContentPane().setLayout(null);
-		JLabel lblNewLabel = new JLabel("PDF Converter Application");
+	public DOCX() {
+		
+	
+		setBounds(800, 150, 550, 420);
+		setTitle("ConVe App");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	
+		getContentPane().setLayout(null);
+		JLabel lblNewLabel = new JLabel("DOCX to .pdf");
 		lblNewLabel.setForeground(new Color(178, 34, 34));
 		lblNewLabel.setFont(new Font("Trebuchet MS", Font.PLAIN, 20));
 		lblNewLabel.setBackground(new Color(128, 0, 0));
 		lblNewLabel.setBounds(182, 27, 266, 29);
-		frame.getContentPane().add(lblNewLabel);
-		
-
-		JLabel topdf = new JLabel("DOCX to .pdf");
-		topdf.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		topdf.setForeground(new Color(0, 100, 0));
-		topdf.setBounds(10, 101, 107, 13);
-		frame.getContentPane().add(topdf);
+	getContentPane().add(lblNewLabel);
 		
 		textField = new JTextField();
 		textField.setBounds(10, 129, 370, 30);
-		frame.getContentPane().add(textField);
+		getContentPane().add(textField);
 		textField.setColumns(10);
 		JButton btnNewButton = new JButton("OPEN");
 		btnNewButton.setForeground(new Color(255, 0, 0));
@@ -99,7 +86,7 @@ public  JTextField textField;
 			}
 		});
 		btnNewButton.setBounds(407, 128, 85, 30);
-		frame.getContentPane().add(btnNewButton);
+		getContentPane().add(btnNewButton);
 		
 		JButton btnNewButton_2 = new JButton("Convert to PDF");
 		btnNewButton_2.addActionListener(new ActionListener() {
@@ -148,15 +135,29 @@ public  JTextField textField;
 			}
 		});
 		btnNewButton_2.setForeground(Color.RED);
-		btnNewButton_2.setBounds(158, 186, 122, 30);
-		frame.getContentPane().add(btnNewButton_2);
+		getContentPane().add(btnNewButton_2);
 		JButton btnNewButton_23 = new JButton("For for .TXT next Page >>");
+		btnNewButton_23.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				setVisible(true);
+				TEXTtopdf dn=new TEXTtopdf();
+				dn.setVisible(true);
+							
+				  dispose(); 
+			}
+		});
+		
+		
+		
 		btnNewButton_23.setForeground(SystemColor.desktop);
 		btnNewButton_23.setBounds(114, 238, 199, 30);
 		
 		
-		frame.getContentPane().add(btnNewButton_23);
+		getContentPane().add(btnNewButton_23);
+		
 	}
+
 	
 	
 	public  void clear() {
